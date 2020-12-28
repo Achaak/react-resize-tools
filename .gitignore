@@ -4,7 +4,7 @@
 .pnp.js
 
 # build
-/build
+/lib
 
 # debug
 npm-debug.log*
