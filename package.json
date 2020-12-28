@@ -1,6 +1,6 @@
 {
   "name": "react-resize-tools",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "Tools to help you with screen resizing.",
   "main": "./build/index.js",
   "module": "build/index.es.js",
