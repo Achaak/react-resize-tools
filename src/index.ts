@@ -1,5 +1,8 @@
-import useScreenSize from './usescreenSize'
+import useScreenSize from './useScreenSize'
+import useScreenWidthType from './useScreenWidthType'
+
 
 export {
-  useScreenSize
+  useScreenSize,
+  useScreenWidthType
 }
