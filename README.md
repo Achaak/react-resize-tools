@@ -34,7 +34,7 @@ const widthType = useScreenWidthType({
 })
 ```
 ### Options :
-| options | default |
+| Options | Default |
 |---------|---------|
 | sm      | 640     |
 | md      | 768     |
