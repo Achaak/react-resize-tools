@@ -1,17 +1,17 @@
-# react-resize
+# react-resize-tools
 
 Tools to help you with screen resizing.
 
 ## Install
 
 ```sh
-yarn add react-resize
+yarn add react-resize-tools
 # or
-npm i react-resize --save
+npm i react-resize-tools --save
 ```
 
 ## Change log
-[https://github.com/Achaak/react-resize/blob/master/CHANGELOG.md](https://github.com/Achaak/react-resize/blob/master/CHANGELOG.md)
+[https://github.com/Achaak/react-resize-tools/blob/master/CHANGELOG.md](https://github.com/Achaak/react-resize-tools/blob/master/CHANGELOG.md)
 
 ## Hooks
 ### useScreenSize
