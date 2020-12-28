@@ -15,13 +15,17 @@ npm i react-resize --save
 
 ## Hooks
 ### useScreenSize
-return **innerWidth**, **innerHeight**, **outerWidth** and **outerHeight** when screen is resized.
+Return **innerWidth**, **innerHeight**, **outerWidth** and **outerHeight** when screen is resized.
+
+Example:
 ``` js
 const size = useScreenSize()
 ```
 
 ### useScreenWidthType
-return **xl**, **sm**, **md**, **lg**, **xl** or **xxl** when screen is resized.
+Return **xl**, **sm**, **md**, **lg**, **xl** or **xxl** when screen is resized.
+
+Example:
 ``` js
 const widthType = useScreenWidthType()
 // or
@@ -34,7 +38,7 @@ const widthType = useScreenWidthType({
 })
 ```
 ### Options :
-| Options | Default |
+| Option | Default |
 |---------|---------|
 | sm      | 640     |
 | md      | 768     |
