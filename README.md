@@ -1,4 +1,4 @@
-# react-resize
+# react-resize-tools
 
 Tools to help you with screen resizing.
 
