@@ -1,2 +1,2 @@
-import usescreenSize from './usescreenSize';
-export { usescreenSize };
+import useScreenSize from './usescreenSize';
+export { useScreenSize };

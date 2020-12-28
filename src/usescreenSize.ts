@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const usescreenSize = () => {
+const useScreenSize = () => {
   const [screenWidth, setscreenWidth] = useState({
     innerWidth: 0,
     innerHeight: 0,
@@ -28,4 +28,4 @@ const usescreenSize = () => {
   return screenWidth;
 };
 
-export default usescreenSize;
+export default useScreenSize;

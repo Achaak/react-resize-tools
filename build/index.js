@@ -2531,7 +2531,7 @@ var react_26 = react.useRef;
 var react_27 = react.useState;
 var react_28 = react.version;
 
-var usescreenSize = function () {
+var useScreenSize = function () {
     var _a = react_27({
         innerWidth: 0,
         innerHeight: 0,
@@ -2554,5 +2554,5 @@ var usescreenSize = function () {
     return screenWidth;
 };
 
-exports.usescreenSize = usescreenSize;
+exports.useScreenSize = useScreenSize;
 //# sourceMappingURL=index.js.map

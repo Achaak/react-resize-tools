@@ -1,7 +1,7 @@
-declare const usescreenSize: () => {
+declare const useScreenSize: () => {
     innerWidth: number;
     innerHeight: number;
     outerWidth: number;
     outerHeight: number;
 };
-export default usescreenSize;
+export default useScreenSize;
