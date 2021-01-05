@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-type useScreenWidthType = {
+export type UseScreenWidthType = {
   sm?: number
   md?: number
   lg?: number
@@ -8,14 +8,14 @@ type useScreenWidthType = {
   xxl?: number
 }
 
-const useScreenWidthType = ({ sm=640, md=768, lg=1024, xl=1280, xxl=1400 }: useScreenWidthType) => {
-  const [screenWidthType, setScreenWidthType] = useState("");
+export type WidthType = "xs" | "sm" | "md" | "lg" | "xl" | "xxl" | null
+
+const useScreenWidthType = ({ sm=640, md=768, lg=1024, xl=1280, xxl=1400 }: UseScreenWidthType): WidthType => {
+  const [screenWidthType, setScreenWidthType] = useState<WidthType | null>(null);
 
   const updateScreenWidth = () => {
-    //setScreenWidth({ x: ev.clientX, y: ev.clientY });
-
     const width = window.innerWidth
-    let widthType = "xs"
+    let widthType: WidthType = "xs"
 
     if(width >= sm)  widthType = "sm"
     if(width >= md)  widthType = "md"
