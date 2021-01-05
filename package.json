@@ -1,6 +1,6 @@
 {
   "name": "react-resize-tools",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "Tools to help you with screen resizing.",
   "main": "./lib/index.js",
   "module": "lib/index.es.js",
@@ -15,7 +15,8 @@
     "lib"
   ],
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "prepublishOnly": "npm run build"
   },
   "author": {
     "name": "Axel Lavoie",
