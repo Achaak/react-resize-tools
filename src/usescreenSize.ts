@@ -1,7 +1,14 @@
 import { useState, useEffect } from "react";
 
+export type ScreenSize = {
+  innerWidth:  number
+  innerHeight: number
+  outerWidth:  number
+  outerHeight: number
+}
+
 const useScreenSize = () => {
-  const [screenSize, setScreenSize] = useState({
+  const [screenSize, setScreenSize] = useState<ScreenSize>({
     innerWidth:  0,
     innerHeight: 0,
     outerWidth:  0,
