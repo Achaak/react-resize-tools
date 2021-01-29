@@ -45,3 +45,11 @@ const widthType = useScreenWidthType({
 | lg      | 1024    |
 | xl      | 1280    |
 | xxl     | 1400    |
+
+### useScroll
+Return **outerHeight** when the page is scrolled.
+
+Example:
+``` js
+const scroll = useScroll()
+```

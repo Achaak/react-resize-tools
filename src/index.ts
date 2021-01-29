@@ -4,10 +4,11 @@ import useScreenWidthType, { UseScreenWidthType, WidthType } from './useScreenWi
 
 export {
   useScreenSize,
+  ScreenSize,
+  
   useScroll,
 
   useScreenWidthType,
   UseScreenWidthType,
   WidthType,
-  ScreenSize,
 }
