@@ -1,18 +1,22 @@
-import { useState, useEffect } from "react";
+import debounce from "lodash.debounce";
+import { useState, useEffect, useCallback } from "react";
 
-const useScroll = () => {
+const useScroll = (wait?: number) => {
   const [screenSize, setScreenSize] = useState({
     outerHeight: 0,
   });
 
-  const updateScroll = () => {
-    setScreenSize({
-      outerHeight: window.outerHeight,
-    })
-  };
+  const updateScroll = useCallback(
+    debounce(() => {
+      setScreenSize({
+        outerHeight: window.outerHeight,
+      });
+    }, wait || 0),
+    []
+  );
 
   useEffect(() => {
-    updateScroll()
+    updateScroll();
 
     window.addEventListener("scroll", updateScroll);
 

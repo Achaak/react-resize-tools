@@ -1,31 +1,35 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
+import debounce from "lodash.debounce";
 
 export type ScreenSize = {
-  innerWidth:  number
-  innerHeight: number
-  outerWidth:  number
-  outerHeight: number
-}
+  innerWidth: number;
+  innerHeight: number;
+  outerWidth: number;
+  outerHeight: number;
+};
 
-const useScreenSize = () => {
+const useScreenSize = (wait?: number) => {
   const [screenSize, setScreenSize] = useState<ScreenSize>({
-    innerWidth:  0,
+    innerWidth: 0,
     innerHeight: 0,
-    outerWidth:  0,
+    outerWidth: 0,
     outerHeight: 0,
   });
 
-  const updateScreenSize = () => {
-    setScreenSize({
-      innerWidth:  window.innerWidth,
-      innerHeight: window.innerHeight,
-      outerWidth:  window.outerWidth,
-      outerHeight: window.outerHeight,
-    })
-  };
+  const updateScreenSize = useCallback(
+    debounce(() => {
+      setScreenSize({
+        innerWidth: window.innerWidth,
+        innerHeight: window.innerHeight,
+        outerWidth: window.outerWidth,
+        outerHeight: window.outerHeight,
+      });
+    }, wait || 0),
+    []
+  );
 
   useEffect(() => {
-    updateScreenSize()
+    updateScreenSize();
 
     window.addEventListener("resize", updateScreenSize);
 
