@@ -1,6 +1,6 @@
 {
   "name": "react-resize-tools",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "Tools to help you with screen resizing.",
   "main": "./lib/index.js",
   "module": "lib/index.es.js",
@@ -29,6 +29,7 @@
   "homepage": "https://github.com/Achaak/react-resize-tools#readme",
   "license": "MIT",
   "devDependencies": {
+    "@types/lodash.debounce": "^4.0.6",
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.3",
     "rollup": "^2.42.4",
@@ -39,6 +40,7 @@
     "typescript": "^4.2.3"
   },
   "dependencies": {
+    "lodash.debounce": "^4.0.8",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
