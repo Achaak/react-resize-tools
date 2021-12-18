@@ -10,6 +10,19 @@ export type UseScreenWidthType = {
 
 export type WidthType = "xs" | "sm" | "md" | "lg" | "xl" | "xxl" | null;
 
+const updateScreenWidth = ({ sm, md, lg, xl, xxl }: UseScreenWidthType) => {
+  const width = window.innerWidth;
+  let widthType: WidthType = "xs";
+
+  if (sm && width >= sm) widthType = "sm";
+  if (md && width >= md) widthType = "md";
+  if (lg && width >= lg) widthType = "lg";
+  if (xl && width >= xl) widthType = "xl";
+  if (xxl && width >= xxl) widthType = "xxl";
+
+  return widthType;
+};
+
 const useScreenWidthType = (
   { sm, md, lg, xl, xxl }: UseScreenWidthType = {
     sm: 640,
@@ -20,30 +33,19 @@ const useScreenWidthType = (
   }
 ): WidthType => {
   const [screenWidthType, setScreenWidthType] = useState<WidthType | null>(
-    null
+    updateScreenWidth({ sm, md, lg, xl, xxl })
   );
 
-  const updateScreenWidth = () => {
-    const width = window.innerWidth;
-    let widthType: WidthType = "xs";
-
-    if (sm && width >= sm) widthType = "sm";
-    if (md && width >= md) widthType = "md";
-    if (lg && width >= lg) widthType = "lg";
-    if (xl && width >= xl) widthType = "xl";
-    if (xxl && width >= xxl) widthType = "xxl";
-
-    if (screenWidthType !== widthType) {
-      setScreenWidthType(widthType);
-    }
+  const update = () => {
+    setScreenWidthType(updateScreenWidth({ sm, md, lg, xl, xxl }));
   };
 
   useEffect(() => {
-    updateScreenWidth();
+    update();
 
-    window.addEventListener("resize", updateScreenWidth);
+    window.addEventListener("resize", update);
 
-    return () => window.removeEventListener("resize", updateScreenWidth);
+    return () => window.removeEventListener("resize", update);
   }, []);
 
   return screenWidthType;
